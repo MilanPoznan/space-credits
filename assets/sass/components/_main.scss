@@ -1,3 +1,48 @@
 body {
-    background-color: white;
+    background-color: black;
+}
+.space {
+  color: $white;
+
+  &__body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    h1 {
+      margin-bottom: 20px;
+      font-size: 38px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 32px;
+    }
+    h4 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+  &__body-newsletter {
+    margin-bottom: 100px;
+
+  }
+  &__body-main {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    img {
+      width: 300px;
+      height: 60px;
+    }
+
+  }
+  &__body-text {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    p {
+      margin: 4px auto;
+    }
+  }
 }
