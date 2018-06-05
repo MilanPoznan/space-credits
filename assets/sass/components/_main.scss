@@ -1,8 +1,15 @@
 body {
-    background-color: black;
+  min-height: 100vh;
+  background-color: black;
+  background-image: url('assets/images/Milky-Way-Above-Earth-4K-UltraHD-16-10-Widescreen-3840x2400.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .space {
+  padding: 50px 5%;
   color: $white;
+  text-align: center;
 
   &__body {
     display: flex;
@@ -14,18 +21,32 @@ body {
       text-align: center;
     }
     h2 {
+      margin-bottom: 30px;
       font-size: 32px;
     }
     h4 {
-      font-size: 28px;
+      font-size: 24px;
     }
     p {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
   &__body-newsletter {
-    margin-bottom: 100px;
-
+    width: 80%;
+    margin-bottom: 60px;
+    input {
+      height: 50px;
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 10px;
+      text-align: center;
+      border-color: transparent;
+      background-color: rgba(33, 64, 114, 0.6);
+      border-radius: 6px;
+    }
+    input:focus {
+      outline: none;
+    }
   }
   &__body-main {
     display: flex;
@@ -33,9 +54,8 @@ body {
     align-items: center;
     img {
       width: 300px;
-      height: 60px;
+      height: auto;
     }
-
   }
   &__body-text {
     display: flex;
@@ -43,6 +63,64 @@ body {
     align-items: center;
     p {
       margin: 4px auto;
+    }
+  }
+  &__body-text::before {
+    position: relative;
+    margin-bottom: 20px;
+    display: block;
+    content: '';
+    height: 2px;
+    width: 100%;
+    max-width: 510px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+@include tablet() {
+  .space {
+    padding: 70px 5%;
+    &__body {
+      h1 {
+        font-size: 42px;
+      }
+      h2 {
+        font-size: 30px;
+      }
+      h4 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@include desktop() {
+  .space {
+    padding: 60px 8%;
+    &__body {
+      h1 {
+        margin-bottom: 8px;
+        font-size: 56px;
+      }
+      h2 {
+        margin-bottom: 20px;
+        font-size: 44px;
+      }
+      h4 {
+        font-size: 36px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+    &__body-newsletter {
+      input {
+        height: 40px;
+        max-width: 450px;
+      }
     }
   }
 }

@@ -1,11 +1,44 @@
 .header {
-  width: 100%;
   display: flex;
   flex-flow: column;
+  width: 100%;
+  padding-bottom: 40px;
   &__left {
     img {
-      width: 80%;
-      height: 100px
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      padding-bottom: 25px;
+    }
+  }
+  &__right {
+    // display: none;
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 40%;
+      max-width: 280px;
+      height: auto;
+    }
+    &-powered, &-eesa-eng, &-eesa-esp {
+      text-align: center;
+    }
+  }
+  
+}
+
+@include tablet() {
+  .header {
+    &__right {
+      &-powered, &-eesa-eng, &-eesa-esp {
+        font-size: 18px;
+      }
+    }
+    &__left {
+      img {
+        width: 80%;
+      }
     }
   }
 }
@@ -13,22 +46,33 @@
 @include desktop() {
   .header {
     width: 100%;
-    height: 240px;
+    max-width: 1210px;
+    margin: 0 auto;
+    height: 180px;
     display: flex;
     flex-flow: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
     &__left {
+      max-width: 77%;
+      margin-top: 24px;
+      align-self: start;
       img {
-        width: 560px;
-        height: 65px
+        width: 40%;
+        height: auto;
+        margin-left: 0;
       }
     }
     &__right {
+      min-width: 23%;
+      align-self: flex-start;
       img {
-        width: 280px;
-        height: 180px;
+        width: 180px;
+        height: 60px;
+        margin-right: 0;
+      }
+      &-powered, &-eesa-eng, &-eesa-esp {
+        text-align: right;
       }
     }
   }
