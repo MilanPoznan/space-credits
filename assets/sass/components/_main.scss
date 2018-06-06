@@ -10,7 +10,8 @@ body {
   padding: 50px 5%;
   color: $white;
   text-align: center;
-
+  font-family: 'Montserrat';
+  font-weight: 300;
   &__body {
     display: flex;
     flex-flow: column;
@@ -19,6 +20,7 @@ body {
       margin-bottom: 20px;
       font-size: 38px;
       text-align: center;
+
     }
     h2 {
       margin-bottom: 30px;
@@ -41,12 +43,24 @@ body {
       margin-bottom: 10px;
       text-align: center;
       border-color: transparent;
-      background-color: rgba(33, 64, 114, 0.6);
       border-radius: 6px;
     }
     input:focus {
       outline: none;
     }
+    form {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      padding: 20px 0;
+    }
+  }
+  &__body-email {
+    background-color: rgba(33, 64, 114, 0.6);
+
+  }
+  &__body-submit {
+    background-color: #00a8e1;
   }
   &__body-main {
     display: flex;
@@ -74,6 +88,12 @@ body {
     width: 100%;
     max-width: 510px;
     background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+footer {
+  img {
+    width: 80px;
+    margin-top: 40px;
   }
 }
 

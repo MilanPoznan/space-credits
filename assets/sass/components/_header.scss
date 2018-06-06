@@ -3,17 +3,19 @@
   flex-flow: column;
   width: 100%;
   padding-bottom: 40px;
+  font-family: 'Montserrat';
+  font-weight: 300;
   &__left {
     img {
       display: block;
-      width: 100%;
+      width: 80%;
       height: auto;
       margin: 0 auto;
       padding-bottom: 25px;
     }
   }
   &__right {
-    // display: none;
+    display: none;
     img {
       display: block;
       margin: 0 auto;
@@ -25,7 +27,7 @@
       text-align: center;
     }
   }
-  
+
 }
 
 @include tablet() {
