@@ -119,15 +119,15 @@ footer {
 
 @include desktop() {
   .space {
-    padding: 60px 8%;
+    padding: 60px 7%;
     &__body {
       h1 {
         margin-bottom: 8px;
-        font-size: 56px;
+        font-size: 48px;
       }
       h2 {
         margin-bottom: 20px;
-        font-size: 44px;
+        font-size: 36px;
       }
       h4 {
         font-size: 36px;
@@ -140,6 +140,9 @@ footer {
       input {
         height: 40px;
         max-width: 450px;
+      }
+      form {
+        padding-top: 0;
       }
     }
   }
