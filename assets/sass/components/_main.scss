@@ -95,6 +95,13 @@ footer {
     width: 80px;
     margin-top: 40px;
   }
+  a {
+    display: block;
+    margin-bottom: 30px;
+  }
+  span {
+    font-size: 12px;
+  }
 }
 
 @include tablet() {
@@ -126,6 +133,7 @@ footer {
         font-size: 48px;
       }
       h2 {
+        max-width: 1240px;
         margin-bottom: 20px;
         font-size: 36px;
       }
