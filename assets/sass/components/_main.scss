@@ -95,6 +95,27 @@ footer {
     width: 80px;
     margin-top: 40px;
   }
+  a {
+    display: block;
+    width: auto;
+    margin: 0 auto 30px;
+  }
+  span {
+    font-size: 12px;
+  }
+  .footer__share {
+    display: flex;
+    flex-flow: column;
+    &-sun {
+      &-text {
+        margin-bottom: 10px;
+      }
+      &-img {
+        width: 160px;
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 @include tablet() {
@@ -115,6 +136,21 @@ footer {
       }
     }
   }
+  footer {
+    img {
+      margin-top: 0;
+    }
+    a {
+      margin: 0;
+    }
+    .footer__share {
+      flex-flow: row;
+      max-width: 360px;
+      margin: 40px auto;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
 }
 
 @include desktop() {
@@ -126,6 +162,7 @@ footer {
         font-size: 48px;
       }
       h2 {
+        max-width: 1240px;
         margin-bottom: 20px;
         font-size: 36px;
       }
@@ -146,4 +183,23 @@ footer {
       }
     }
   }
+  footer {
+    img {
+      width: 70px;
+    }
+    .footer__share {
+      max-width: 520px;
+      &-telegram {
+        margin-left: 60px;
+      }
+      &-sun {
+        display: flex;
+        align-items: center;
+        &-text {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  
 }
